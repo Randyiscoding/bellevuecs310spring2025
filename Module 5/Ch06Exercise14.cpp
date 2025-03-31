@@ -29,15 +29,40 @@ int main(){
   double dblHourlyrate;
 
   //Inputs
+  cout << "Welcome to J&J Accounting Firm's Tax Consultation Billing System\n";
+  cout << "-----------------------------------------------------------------\n\n";
+  cout << "Please enter the hourly consultation rate (in dollars): $";
   cin >> dblHourlyrate;
+  cout << "\nEnter the total consultation time (in minutes): ";
   cin >> dblTime;
+  cout << "Enter your total income for the year: $";
   cin >> dblIncome;
 
   //Calculations
   dblPrice = TaxBilling(dblIncome, dblTime, dblHourlyrate);
 
   //Output
-   cout << dblPrice;
+  struct group_facet: public std::numpunct<char> {
+  protected:
+    string do_grouping() const { return "\003"; }
+  };
+  cout.imbue(locale(cout.getloc(), new group_facet));
+  cout.precision(2);
+
+  cout << "\n-----------------------------------------------\n";
+  cout << "Billing Summary:\n";
+  cout << "Hourly Rate: $" << dblHourlyrate << "\n";
+  cout << "Consultation Time: " << dblTime << " minutes\n";
+  cout << "Income: $" << fixed << dblIncome << "\n";
+  cout << "-----------------------------------------------\n";
+
+  if (dblPrice == 0) {
+      cout << "Great news! Your consultation is free of charge.\n";
+  } else {
+      cout << "Total amount due: $" << fixed << dblPrice << "\n";
+  }
+  cout << "Thank you for using our service!\n";
+  cout << "-----------------------------------------------\n";
 
 
 
