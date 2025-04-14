@@ -1,0 +1,234 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "bellevuecs310spring2025.exe"
+		},
+		{
+			"path" : "bellevuecs310spring2025.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fdiagnostics-color=always"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=gnu++14 -fdiagnostics-color=always"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		}
+	],
+	"id" : "bellevuecs310spring2025::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "bellevuecs310spring2025",
+	"nameOnDisk" : "bellevuecs310spring2025.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : ".idea/fileTemplates/internal/C Source File.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 1/Ch02Exercise12.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 1/Ch02Exercise13.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 2/Ch03Exercise07.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 2/Mod2Dis1JayFisher.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 2/Mod2Disscussion1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 3/Ch04Exercise16.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 3/Mod3Discussion1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 3/Mod3Discussion1Bonczynski.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 4/Ch05Exercise33.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 4/Mod4Discussion1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 4/Mod4Discussion1Zimmer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 5/Ch06Exercise14.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 5/Mod5Discussion1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 5/Mod5Discussion1Eaton.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Module 6/Ch07Exercise04.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
