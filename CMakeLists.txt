@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.30)
+project(bellevuecs310spring2025)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(bellevuecs310spring2025
+    ".idea/fileTemplates/internal/C Source File.c"
+    "Module 1/Ch02Exercise12.cpp"
+    "Module 1/Ch02Exercise13.cpp"
+    "Module 2/Ch03Exercise07.cpp"
+    "Module 2/Mod2Dis1JayFisher.cpp"
+    "Module 2/Mod2Disscussion1.cpp"
+    "Module 3/Ch04Exercise16.cpp"
+    "Module 3/Mod3Discussion1.cpp"
+    "Module 3/Mod3Discussion1Bonczynski.cpp"
+    "Module 4/Ch05Exercise33.cpp"
+    "Module 4/Mod4Discussion1.cpp"
+    "Module 4/Mod4Discussion1Zimmer.cpp"
+    "Module 5/Ch06Exercise14.cpp"
+    "Module 5/Mod5Discussion1.cpp"
+    "Module 5/Mod5Discussion1Eaton.cpp"
+    "Module 6/Ch07Exercise04.cpp")
