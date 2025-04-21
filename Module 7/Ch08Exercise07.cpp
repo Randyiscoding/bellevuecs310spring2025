@@ -2,7 +2,7 @@
 Created by Randy Easton for CS310 on 4/21/2025
 Assignment Title: Module 6: Ch07Exercise04.cpp
  */
-
+// TOD0: Name input special characters, Name input white spaces getline()
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,16 +15,16 @@ int count_vowels(string input) {
  Function checks each character in the input, looks for each character in the input in the list of vowels
  returns "npos" if no character is found (characters that are npos are not vowels) and, adds them to a string
    */
- int adjusted = 0;
  string vowels = "0123456789";
  for (char charc : input) {
-  if (vowels.find(charc) != string::npos) {
-   return 0;
+  if (vowels.find(charc) == string::npos) {
+   ;
   }
   else {
    return -1;
   }
  }
+ return 0;
 }
 
 
