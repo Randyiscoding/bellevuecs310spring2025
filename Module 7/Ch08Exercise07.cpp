@@ -1,10 +1,10 @@
 /*
 Created by Randy Easton for CS310 on 4/21/2025
-Assignment Title: Module 6: Ch07Exercise04.cpp
+Assignment Title: Module 6: Ch08Exercise07.cpp
  */
-// TOD0: Name input special characters, Name input white spaces getline()
+
 #include <iostream>
-#include <vector>
+#include <limits>
 #include <string>
 #include <iomanip>
 
@@ -15,7 +15,7 @@ int count_vowels(string input) {
  Function checks each character in the input, looks for each character in the input in the list of vowels
  returns "npos" if no character is found (characters that are npos are not vowels) and, adds them to a string
    */
- string vowels = "0123456789";
+ string vowels = "0123456789!@#$%^&*()-_=+\|[]{};:/?.>";
  for (char charc : input) {
   if (vowels.find(charc) == string::npos) {
    ;
@@ -42,12 +42,13 @@ int main() {
   // Error Handling for names
   while (true) {
    cout << "Candidate name (" << x + 1 << " of 5): ";
-   cin >> strinput;
+   getline(cin, strinput);
    if (!strinput.empty() && count_vowels(strinput) == 0 ) {
     canidates[0][x] = strinput;
     break; // exit name input loop
-   } else {
-    cout << "Invalid input. Please enter a valid candidate name.\n";
+   }
+   else {
+    cout << "Invalid input. Please enter a valid candidate name. (Press Enter To Continue)\n";
     cin.clear();
     cin.ignore(10000, '\n');
    }
@@ -59,6 +60,7 @@ int main() {
    cin >> intinput;
    if (!cin.fail() && intinput >= 0) {
     canidates[1][x] = to_string(intinput);
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     break; // exit vote input loop
    } else {
     cout << "Invalid input. Please enter a positive whole number.\n";
