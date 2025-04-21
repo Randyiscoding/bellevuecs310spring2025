@@ -5,6 +5,8 @@ Assignment Title: Module 6: Ch07Exercise04.cpp
 
 #include <iostream>
 #include <vector>
+#include <string>
+
 using namespace std;
 
 int checkstring(string check) {
