@@ -74,13 +74,13 @@ class BankAccount {
 
 
 };
-
+int BankAccount::ac_numbergen = 100000000;
 int main() {
     BankAccount newmembers[10];
 
     string First;
     string last;
-    int accountType = NULL;
+    int accountType = 10;
     double deposit = 0.00;
     int credit_score = 0;
 
@@ -102,6 +102,15 @@ int main() {
         newmembers[i].set_ac_type(accountType);
         newmembers[i].set_ac_balance(deposit);
         newmembers[i].set_ac_interest_rate(credit_score);
+    }
+    cout << "\nAccount Summaries:\n";
+    cout << fixed << setprecision(2);
+    for (int i = 0; i < 10; i++) {
+        cout << "\nAccount #" << newmembers[i].get_ac_number() << endl;
+        cout << "\nRouting #" << newmembers[i].get_ac_routing() << endl;
+        cout << "\nAccount Holder Name: " << newmembers[i].get_ac_fname() << " " << newmembers[i].get_ac_lname() << endl;
+        cout << "\nBalance: $" << newmembers[i].get_ac_balance() << endl;
+        cout << "\nInterest Rate: " << newmembers[i].get_ac_interest() << endl;
     }
 
 
