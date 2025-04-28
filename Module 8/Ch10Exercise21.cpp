@@ -83,7 +83,7 @@ int main() {
     int accountType = 10;
     double deposit = 0.00;
     int credit_score = 0;
-
+//TODO: Add error Handling
     for (int i = 0; i < 10; i++) {
         cout << "\nSetting up account #" << i + 1 << endl;
 
