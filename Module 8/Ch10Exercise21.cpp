@@ -10,32 +10,33 @@
 using namespace std;
 
 class BankAccount {
+    static int ac_numbergen;
     //Random Number generator. credit: Google https://www.google.com/search?q=c%2B%2B+generate+random+12+digit+number&oq=c%2B%2B+generate+random+12+digit+number&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEyMzUxajBqN6gCCLACAfEF7V5t0Grwe5E&sourceid=chrome&ie=UTF-8
-    int ac_number_gen() {
+    int ac_route_gen() {
         // Seed the random number generator
         std::random_device rd;
         std::mt19937 gen(rd());
 
-        // Define the range for a 12-digit number
-        long long min_val = 10000000LL; // Minimum 12-digit number
-        long long max_val = 99999999LL; // Maximum 12-digit number
+        // Define the range for a 9-digit number
+        long long min_val = 100000000LL; // Minimum 12-digit number
+        long long max_val = 999999999LL; // Maximum 12-digit number
 
         // Create a uniform distribution within the range
         std::uniform_int_distribution<long long> dist(min_val, max_val);
 
-        // Generate and print the random 8-digit number
+        // Generate and print the random 9-digit number
         long long random_number = dist(gen);
 
         return random_number;
     }
-    int ac_number = ac_number_gen();
 
 
     protected:
         string ac_fname;
         string ac_lname;
         string ac_type;
-        int ac_routing = 021000021;
+        int ac_number = ac_numbergen++;
+        int ac_routing = ac_route_gen();
         double ac_balance = 0.00;
         double ac_interest_rate = .00;
 
@@ -54,10 +55,18 @@ class BankAccount {
         void set_ac_balance(double bal) {
             ac_balance = round(bal * 100.00)/100.00;
         }
+    void set_ac_interest_rate(int credit_score) {
+            if (credit_score <= 500) {ac_interest_rate = .29;}
+            if (credit_score >= 850) {ac_interest_rate = .01;}
+            if (credit_score >= 501 && credit_score <= 849) {
+                ac_interest_rate = .29 - ((0.28/349)*(credit_score - 501));
+            }
+        }
 
         //get
         string get_ac_fname(){return ac_fname;}
         string get_ac_lname(){return ac_lname;}
+        string get_ac_type(){return ac_type;}
         int get_ac_number(){return ac_number;}
         int get_ac_routing(){return ac_routing;}
         double get_ac_balance(){return ac_balance;}
@@ -67,20 +76,35 @@ class BankAccount {
 };
 
 int main() {
-    BankAccount newmember;
-    string First = "Randy";
-    string last = "Easton";
-    int accounttype = 1;
-    double deposit = 23561.43;
+    BankAccount newmembers[10];
 
-    newmember.set_ac_name(First,last);
-    newmember.set_ac_type(accounttype);
-    newmember.set_ac_balance(deposit);
+    string First;
+    string last;
+    int accountType = NULL;
+    double deposit = 0.00;
+    int credit_score = 0;
 
-    cout << newmember.get_ac_number() << endl;
-    cout << newmember.get_ac_fname()+" "+newmember.get_ac_lname() << endl;
-    cout << fixed << setprecision(2);
-    cout << "$"<<newmember.get_ac_balance() << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << "\nSetting up account #" << i + 1 << endl;
+
+        cout << "Enter first name: ";
+        cin >> First;
+        cout << "Enter last name: ";
+        cin >> last;
+        cout << "Enter account type (0 for Checking, 1 for Savings): ";
+        cin >> accountType;
+        cout << "Enter Your credit Score: ";
+        cin >> credit_score;
+        cout << "Enter initial deposit amount: $";
+        cin >> deposit;
+
+        newmembers[i].set_ac_name(First, last);
+        newmembers[i].set_ac_type(accountType);
+        newmembers[i].set_ac_balance(deposit);
+        newmembers[i].set_ac_interest_rate(credit_score);
+    }
+
+
 
 
 
