@@ -34,4 +34,6 @@ add_executable(bellevuecs310spring2025
         "Module 9/Ch11Exercise13.cpp"
         "Module 9/Mod9Discussion1.cpp"
         "Module 9/Mod9DiscussionZimmer.cpp"
-        "Module 10/Ch12Exercise03.cpp")
+        "Module 10/Ch12Exercise03.cpp"
+        "Module 10/Mod10discussion1.cpp"
+        "Module 10/Mod10Discussion1Answerkey.cpp")
