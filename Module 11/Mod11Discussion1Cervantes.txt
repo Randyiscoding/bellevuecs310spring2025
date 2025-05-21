@@ -1,0 +1,25 @@
+1. removed unused Include directives (low-med prioirity, mem usage, removing them reduces clutter and compiles faster.)
+2. removed std:: (low prioirty, code clarity, asthetics)
+3. Line 23 - 35 in order to fix incorrect structure of struct: consolidating spacing for cleaner look, removed un needed brackets etc
+4. Line 63 Needed a semicolon for secondary struct to be valid
+5. Line 34 Removed Template over secondary struct since it looked unused
+6. Line 66-67 structs have to be initialized similar to other variables
+7. Line 71 requires a null terminator or will overflow on read causing an error or bad readback
+8. Line 75, 84, 91, 99 Cannot initialize structs in that one (hence #6)
+9. rescinded #5 - needed to separate the two different structs
+10. Line 29 Moved to outside the for loop to stop automatic failure of loop
+11. Revised the is_vowel() Function Logic
+        Original: Used tolower(c) once and compared mixed lowercase and original characters.
+        Fixed: Cleaned up the function by directly comparing the lowercased character to vowel letters.
+        Why: Prevents incorrect evaluations when character casing is inconsistent.
+12. Replaced Template Specialization with Separate Template Struct
+        Original: Used template specialization for const char* within the same vowel_counter struct.
+        Fixed: Created a second template struct named vowel_counter2<T2> instead of specializing.
+        Why: A design workaround that simplifies usage and avoids potential issues with struct ambiguity in calls.
+13. Fixed Template Method Call Syntax
+        Original: Called count() method using vowel_counter<T>::count(...) syntax, which is incorrect without an object.
+        Fixed: Properly instantiated template objects (vowel_counter<string> vc;) and called the method via object reference (vc.count(...)).
+        Why: Template methods are non-static by default and must be called via an instance.
+
+Line number is approximate and could vary +/- 10 lines
+
