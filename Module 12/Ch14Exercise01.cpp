@@ -18,10 +18,25 @@ double inches_to_centimeters(T inches) {
 }
 
 int main() {
+    int input = 0;
     int inches = 0;
     double cent = 0;
+    cout << "Welcome and Thank you for using the Converter" << endl;
+    cout << "We Will convert length in feet and inches to centimeters" <<endl;
+    cout << "First, enter the length in feet *If you only have inches enter ""0"" for feet)" << endl;
     while (true) {
-        if (!(cin >> inches)) {
+        if (!(cin >> input)) {
+            cerr << "Invalid input. Please enter a numeric value.\n";
+            cin.clear();
+            cin.ignore(10000, '\n');
+            continue;
+        }
+        break;
+    }
+    inches = input*12;
+    cout << "Enter the length in inches" << endl;
+    while (true) {
+        if (!(cin >> input)) {
             cerr << "Invalid input. Please enter a numeric value.\n";
             cin.clear();
             cin.ignore(10000, '\n');
@@ -29,6 +44,7 @@ int main() {
         }
         else {
             try {
+                inches += input;
                 cent = inches_to_centimeters(inches);
                 cout << fixed << setprecision(2) << cent << " cm" << endl;
                 break;
